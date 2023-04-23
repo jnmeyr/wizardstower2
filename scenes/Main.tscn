@@ -1,0 +1,73 @@
+[gd_scene load_steps=18 format=3 uid="uid://de1q7sn7agphb"]
+
+[ext_resource type="Script" path="res://scripts/Game.cs" id="1_lq2yt"]
+[ext_resource type="PackedScene" uid="uid://dtoy0y63bv1ud" path="res://levels/level1.tscn" id="2_saa03"]
+[ext_resource type="PackedScene" uid="uid://dbosgcr76t4uk" path="res://levels/level2.tscn" id="3_l4mtj"]
+[ext_resource type="PackedScene" uid="uid://drh3o3l2idtpb" path="res://levels/level3.tscn" id="4_pd38x"]
+[ext_resource type="Script" path="res://scripts/StateMachine.cs" id="5_0enfw"]
+[ext_resource type="AudioStream" uid="uid://dlaht4yfprhhv" path="res://music/music.wav" id="5_5lpox"]
+[ext_resource type="AudioStream" uid="uid://dgq7desmi7w7q" path="res://sounds/gold.wav" id="6_c2a8u"]
+[ext_resource type="Script" path="res://scripts/TitleState.cs" id="6_wtfc8"]
+[ext_resource type="Script" path="res://scripts/LevelState.cs" id="7_6me5m"]
+[ext_resource type="AudioStream" uid="uid://bemqfavuphejy" path="res://sounds/door.wav" id="7_j3gql"]
+[ext_resource type="AudioStream" uid="uid://dl888rftw7c0c" path="res://sounds/failure.wav" id="7_qjgkq"]
+[ext_resource type="AudioStream" uid="uid://b3bialr4mdsf5" path="res://sounds/success.wav" id="8_5a5mr"]
+[ext_resource type="Script" path="res://scripts/FailureState.cs" id="9_7bl5q"]
+[ext_resource type="Script" path="res://scripts/SuccessState.cs" id="10_spkj8"]
+[ext_resource type="Texture2D" uid="uid://yqfnxbl056va" path="res://images/title.png" id="15_xpqh6"]
+[ext_resource type="Texture2D" uid="uid://b6hme34hdehmn" path="res://images/failure.png" id="17_qauy0"]
+[ext_resource type="Texture2D" uid="uid://pnha332i452k" path="res://images/success.png" id="20_ba0jc"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_lq2yt")
+level1 = ExtResource("2_saa03")
+level2 = ExtResource("3_l4mtj")
+level3 = ExtResource("4_pd38x")
+
+[node name="State" type="Node" parent="."]
+script = ExtResource("5_0enfw")
+
+[node name="Title" type="Node" parent="State"]
+script = ExtResource("6_wtfc8")
+
+[node name="Level" type="Node" parent="State"]
+script = ExtResource("7_6me5m")
+
+[node name="Failure" type="Node" parent="State"]
+script = ExtResource("9_7bl5q")
+
+[node name="Success" type="Node" parent="State"]
+script = ExtResource("10_spkj8")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_5lpox")
+
+[node name="DoorSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_j3gql")
+
+[node name="GoldSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_c2a8u")
+
+[node name="FailureSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_qjgkq")
+
+[node name="SuccessSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_5a5mr")
+
+[node name="TitleImage" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(256, 256)
+texture = ExtResource("15_xpqh6")
+
+[node name="FailureImage" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(256, 256)
+texture = ExtResource("17_qauy0")
+
+[node name="SuccessImage" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(256, 256)
+texture = ExtResource("20_ba0jc")

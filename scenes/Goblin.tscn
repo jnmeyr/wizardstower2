@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://buj13eqh83m80"]
+
+[ext_resource type="Script" path="res://scripts/Goblin.cs" id="1_rl455"]
+[ext_resource type="Texture2D" uid="uid://b5tijkfgxidt4" path="res://resources/goblin.png" id="2_svfaf"]
+[ext_resource type="PackedScene" uid="uid://cnf7mdphd3sri" path="res://scenes/RandomDirectionProvider.tscn" id="4_6vwai"]
+[ext_resource type="Script" path="res://scripts/DirectionChecker.cs" id="5_7quks"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8k20"]
+size = Vector2(16, 16)
+
+[node name="Goblin" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_rl455")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_svfaf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g8k20")
+
+[node name="DirectionChecker" type="RayCast2D" parent="."]
+target_position = Vector2(0, 0)
+collide_with_areas = true
+script = ExtResource("5_7quks")
+
+[node name="DirectionProvider" parent="." instance=ExtResource("4_6vwai")]

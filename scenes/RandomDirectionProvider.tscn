@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnf7mdphd3sri"]
+
+[ext_resource type="Script" path="res://scripts/RandomDirectionProvider.cs" id="1_ag47m"]
+[ext_resource type="PackedScene" uid="uid://l711yo0x1wir" path="res://scenes/DirectionChecker.tscn" id="2_q5sou"]
+
+[node name="RandomDirectionProvider" type="Node2D"]
+script = ExtResource("1_ag47m")
+
+[node name="DirectionChecker" parent="." instance=ExtResource("2_q5sou")]

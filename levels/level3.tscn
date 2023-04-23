@@ -1,0 +1,292 @@
+[gd_scene load_steps=8 format=3 uid="uid://drh3o3l2idtpb"]
+
+[ext_resource type="Texture2D" uid="uid://svhy1w8nyga8" path="res://resources/tiles.png" id="2_8mgeb"]
+[ext_resource type="PackedScene" uid="uid://bmajypqhfdiut" path="res://scenes/Window.tscn" id="2_81s0g"]
+[ext_resource type="PackedScene" uid="uid://cta0yjfa3oc5p" path="res://scenes/Gold.tscn" id="3_o2eqw"]
+[ext_resource type="PackedScene" uid="uid://bjjtsqal12dun" path="res://scenes/Rogue.tscn" id="4_sm576"]
+[ext_resource type="PackedScene" uid="uid://yakos42sp34" path="res://scenes/Wizard.tscn" id="6_klgte"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uw53q"]
+resource_name = "<null>"
+texture = ExtResource("2_8mgeb")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_kl3ta"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_uw53q")
+
+[node name="Level3" type="TileMap"]
+tile_set = SubResource("TileSet_kl3ta")
+cell_quadrant_size = 32
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 65536, 0, 131072, 65536, 0, 196608, 65536, 0, 262144, 65536, 0, 327680, 65536, 0, 983041, 65536, 0, 983042, 65536, 0, 983043, 65536, 0, 983044, 65536, 1, 983045, 65536, 0, 983046, 65536, 0, 917519, 65536, 0, 851983, 65536, 0, 786447, 65536, 0, 720911, 65536, 0, 655375, 65536, 0, 14, 65536, 0, 13, 65536, 0, 12, 65536, 0, 11, 0, 0, 10, 65536, 0, 9, 65536, 0, 589830, 65536, 0, 524294, 0, 0, 458758, 65536, 0, 393222, 65536, 0, 327686, 65536, 0, 262150, 0, 0, 196614, 65536, 0, 65541, 65536, 0, 65540, 65536, 0, 65539, 65536, 0, 65538, 65536, 0, 65537, 65536, 0, 131073, 0, 0, 262145, 0, 0, 655361, 65536, 0, 720897, 65536, 0, 786433, 65536, 0, 851969, 65536, 0, 917505, 65536, 0, 917506, 0, 0, 851970, 0, 0, 786434, 0, 0, 720898, 0, 0, 655362, 65536, 0, 720899, 0, 0, 786435, 65536, 0, 851971, 65536, 0, 917507, 0, 0, 917508, 0, 0, 851972, 65536, 0, 786436, 65536, 0, 720900, 0, 0, 327684, 0, 0, 196612, 0, 0, 131076, 0, 0, 196613, 65536, 0, 262149, 0, 0, 327685, 0, 0, 393221, 65536, 0, 458757, 0, 0, 524293, 0, 0, 589829, 65536, 0, 655365, 65536, 0, 720901, 0, 0, 786437, 0, 0, 851973, 0, 0, 917509, 0, 0, 917510, 65536, 0, 851974, 65536, 0, 786438, 65536, 0, 720902, 0, 0, 655366, 65536, 0, 655367, 0, 0, 589831, 0, 0, 524295, 0, 0, 458759, 0, 0, 393223, 65536, 0, 327687, 0, 0, 262151, 0, 0, 196615, 65536, 0, 196616, 65536, 0, 262152, 0, 0, 327688, 0, 0, 393224, 0, 0, 458760, 0, 0, 524296, 0, 0, 589832, 65536, 0, 655368, 0, 0, 720904, 0, 0, 720903, 0, 0, 786439, 65536, 0, 786440, 65536, 0, 786441, 65536, 0, 720905, 0, 0, 655369, 65536, 0, 589833, 65536, 0, 524297, 65536, 0, 458761, 0, 0, 393225, 65536, 0, 327689, 65536, 0, 262153, 0, 0, 196617, 65536, 0, 131081, 65536, 0, 65545, 65536, 0, 65546, 0, 0, 131082, 0, 0, 262154, 0, 0, 327690, 65536, 0, 393226, 65536, 0, 458762, 0, 0, 524298, 0, 0, 589834, 65536, 0, 655370, 0, 0, 720906, 0, 0, 786442, 65536, 0, 851978, 65536, 0, 917514, 65536, 0, 917515, 65536, 0, 851979, 0, 0, 786443, 0, 0, 720907, 0, 0, 655371, 0, 0, 589835, 0, 0, 524299, 0, 0, 458763, 0, 0, 393227, 0, 0, 327691, 0, 0, 262155, 0, 0, 196619, 65536, 0, 131083, 65536, 0, 65547, 0, 0, 65548, 0, 0, 131084, 65536, 0, 196620, 65536, 0, 262156, 0, 0, 327692, 65536, 0, 393228, 65536, 0, 458764, 65536, 0, 524300, 65536, 0, 589836, 65536, 0, 720908, 65536, 0, 786444, 65536, 0, 917516, 65536, 0, 917517, 65536, 0, 786445, 65536, 0, 720909, 65536, 0, 327693, 65536, 0, 262157, 0, 0, 196621, 0, 0, 131085, 0, 0, 65549, 0, 0, 65550, 65536, 0, 131086, 65536, 0, 196622, 65536, 0, 262158, 65536, 0, 327694, 65536, 0, 851982, 0, 0, 917518, 65536, 0, 786446, 0, 0, 720910, 0, 0, 655363, 65536, 0, 393219, 65536, 0, 262146, 65536, 0, 196609, 0, 0, 196610, 65536, 0, 196611, 65536, 0, 262147, 65536, 0, 262148, 0, 0, 458755, 65536, 0, 524291, 65536, 0, 589827, 65536, 0, 655364, 0, 0, 589828, 0, 0, 524292, 0, 0, 458756, 0, 0, 393220, 0, 0, 393218, 65536, 0, 393217, 65536, 0, 393216, 65536, 0, 589837, 65536, 0, 589838, 65536, 0, 589839, 65536, 0, 851980, 0, 0, 851981, 0, 0, 655374, 0, 0, 655373, 0, 0, 655372, 0, 0, 131074, 0, 0, 131075, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 131077, 65536, 0, 196618, 0, 0, -65526, 65536, 0, -65525, 65536, 0, -65524, 65536, 0, 1048579, 65536, 0, 1048580, 65536, 0, 1048581, 65536, 0)
+
+[node name="Window" parent="." instance=ExtResource("2_81s0g")]
+position = Vector2(368, 16)
+
+[node name="Gold1" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(336, 48)
+
+[node name="Gold2" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(368, 48)
+
+[node name="Gold3" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(400, 48)
+
+[node name="Gold4" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(432, 48)
+
+[node name="Gold5" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(48, 80)
+
+[node name="Gold6" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(80, 80)
+
+[node name="Gold7" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(112, 80)
+
+[node name="Gold8" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(144, 80)
+
+[node name="Gold9" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(336, 80)
+
+[node name="Gold10" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(432, 80)
+
+[node name="Gold11" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(48, 112)
+
+[node name="Gold12" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(144, 112)
+
+[node name="Gold13" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(336, 112)
+
+[node name="Gold14" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(432, 112)
+
+[node name="Gold15" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(48, 144)
+
+[node name="Gold16" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(144, 144)
+
+[node name="Gold17" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(176, 144)
+
+[node name="Gold18" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(208, 144)
+
+[node name="Gold19" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(240, 144)
+
+[node name="Gold20" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(272, 144)
+
+[node name="Gold21" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(304, 144)
+
+[node name="Gold22" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(336, 144)
+
+[node name="Gold23" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(368, 144)
+
+[node name="Gold24" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(400, 144)
+
+[node name="Gold25" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(432, 144)
+
+[node name="Gold26" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(48, 176)
+
+[node name="Gold27" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(80, 176)
+
+[node name="Gold28" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(112, 176)
+
+[node name="Gold29" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(144, 176)
+
+[node name="Gold30" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(176, 176)
+
+[node name="Gold31" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(240, 176)
+
+[node name="Gold32" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(272, 176)
+
+[node name="Gold33" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(368, 176)
+
+[node name="Gold34" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(144, 208)
+
+[node name="Gold35" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(272, 208)
+
+[node name="Gold36" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(368, 208)
+
+[node name="Gold37" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(144, 240)
+
+[node name="Gold38" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(176, 240)
+
+[node name="Gold39" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(304, 240)
+
+[node name="Gold40" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(336, 240)
+
+[node name="Gold41" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(368, 240)
+
+[node name="Gold42" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(144, 272)
+
+[node name="Gold43" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(176, 272)
+
+[node name="Gold44" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(208, 272)
+
+[node name="Gold45" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(336, 272)
+
+[node name="Gold46" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(368, 272)
+
+[node name="Gold47" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(144, 304)
+
+[node name="Gold48" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(240, 304)
+
+[node name="Gold49" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(368, 304)
+
+[node name="Gold50" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(144, 336)
+
+[node name="Gold51" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(240, 336)
+
+[node name="Gold52" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(272, 336)
+
+[node name="Gold53" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(336, 336)
+
+[node name="Gold54" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(368, 336)
+
+[node name="Gold55" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(400, 336)
+
+[node name="Gold56" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(432, 336)
+
+[node name="Gold57" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(464, 336)
+
+[node name="Gold58" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(80, 368)
+
+[node name="Gold59" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(112, 368)
+
+[node name="Gold60" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(144, 368)
+
+[node name="Gold61" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(176, 368)
+
+[node name="Gold62" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(208, 368)
+
+[node name="Gold63" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(240, 368)
+
+[node name="Gold64" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(272, 368)
+
+[node name="Gold65" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(304, 368)
+
+[node name="Gold66" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(336, 368)
+
+[node name="Gold67" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(368, 368)
+
+[node name="Gold68" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(464, 368)
+
+[node name="Gold69" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(80, 400)
+
+[node name="Gold70" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(176, 400)
+
+[node name="Gold71" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(368, 400)
+
+[node name="Gold72" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(464, 400)
+
+[node name="Gold73" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(80, 432)
+
+[node name="Gold74" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(176, 432)
+
+[node name="Gold75" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(368, 432)
+
+[node name="Gold76" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(400, 432)
+
+[node name="Gold77" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(432, 432)
+
+[node name="Gold78" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(464, 432)
+
+[node name="Gold79" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(80, 464)
+
+[node name="Gold80" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(112, 464)
+
+[node name="Gold81" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(144, 464)
+
+[node name="Gold82" parent="." instance=ExtResource("3_o2eqw")]
+position = Vector2(176, 464)
+
+[node name="Rogue" parent="." instance=ExtResource("4_sm576")]
+position = Vector2(144, 496)
+
+[node name="Wizard" parent="." instance=ExtResource("6_klgte")]
+position = Vector2(240, 240)

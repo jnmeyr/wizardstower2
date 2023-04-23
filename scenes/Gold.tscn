@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cta0yjfa3oc5p"]
+
+[ext_resource type="Script" path="res://scripts/Gold.cs" id="1_lydjk"]
+[ext_resource type="Texture2D" uid="uid://d37j2tlkos6qn" path="res://resources/gold.png" id="1_mlvll"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8wdg"]
+size = Vector2(16, 16)
+
+[node name="Gold" type="Area2D" groups=["gold"]]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_lydjk")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mlvll")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a8wdg")

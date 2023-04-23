@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://l711yo0x1wir"]
+
+[ext_resource type="Script" path="res://scripts/DirectionChecker.cs" id="1_vcdxj"]
+
+[node name="DirectionChecker" type="RayCast2D"]
+target_position = Vector2(0, 0)
+collide_with_areas = true
+script = ExtResource("1_vcdxj")

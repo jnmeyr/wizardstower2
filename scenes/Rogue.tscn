@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjjtsqal12dun"]
+
+[ext_resource type="Script" path="res://scripts/Rogue.cs" id="1_rpr1l"]
+[ext_resource type="Texture2D" uid="uid://d4fessvblxcus" path="res://resources/rogue.png" id="2_810md"]
+[ext_resource type="Script" path="res://scripts/DirectionChecker.cs" id="3_xmxck"]
+[ext_resource type="Script" path="res://scripts/InputDirectionProvider.cs" id="4_du23q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ml8ua"]
+size = Vector2(16, 16)
+
+[node name="Rogue" type="Area2D"]
+collision_layer = 14
+collision_mask = 0
+script = ExtResource("1_rpr1l")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_810md")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ml8ua")
+
+[node name="DirectionChecker" type="RayCast2D" parent="."]
+target_position = Vector2(0, 0)
+collide_with_areas = true
+script = ExtResource("3_xmxck")
+
+[node name="DirectionProvider" type="Node" parent="."]
+script = ExtResource("4_du23q")
