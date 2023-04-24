@@ -1,6 +1,6 @@
 using Godot;
 
-public abstract partial class Entity : Area2D
+public abstract partial class Entity : Node2D
 {
 
     protected Signals signals;

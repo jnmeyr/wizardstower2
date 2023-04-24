@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class Gold : Area2D
+public partial class Gold : Node2D
 {
 
     private Signals signals;
@@ -12,7 +12,7 @@ public partial class Gold : Area2D
 
     public override void _Ready()
     {
-        AreaEntered += _ => OnAreaEntered();
+        GetNode<Area2D>("Area2D").AreaEntered += _ => OnAreaEntered();
     }
 
     private void OnAreaEntered()

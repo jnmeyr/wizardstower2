@@ -1,3 +1,5 @@
+using Godot;
+
 public partial class Goblin : Entity
 {
 
@@ -5,7 +7,7 @@ public partial class Goblin : Entity
     {
         base._Ready();
 
-        AreaEntered += _ => OnAreaEntered();
+        GetNode<Area2D>("Area2D").AreaEntered += _ => OnAreaEntered();
     }
 
     private void OnAreaEntered()
